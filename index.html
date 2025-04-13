@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Tracker Pro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <h1><i class="fa-solid fa-chart-line" style="color: #4CAF50;"></i> Real-Time Cryptocurrency Tracker</h1>
+        <div id="controls">
+            <label for="sortBy">Sort by:</label>
+            <select id="sortBy">
+                <option value="market_cap">Market Cap</option>
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+                <option value="change">24h Change</option>
+            </select>
+            <label>
+                <i class="fa-solid fa-moon" style="margin-right: 5px;"></i> Dark Mode
+                <input type="checkbox" id="themeToggle" />
+            </label>
+            <button id="clearComparison">Clear Comparison</button>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Top Cryptocurrencies</h2>
+            <ul id="cryptos"></ul>
+        </section>
+
+        <section>
+            <h2>Comparison (Click to View Chart)</h2>
+            <div id="comparison-container"></div>
+            <canvas id="priceChart"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <i class="fa-brands fa-bitcoin" style="color: orange;"></i>
+            Powered by CoinGecko API
+            | Made with <i class="fa-solid fa-heart" style="color: crimson;"></i> Bigyan Dhakal c0932095
+        </p>
+
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
